@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+              font-family: arial;
+              color:captiontext; 
+              font-size:40px;
+              display:inline;
+              color:white; 
+              text-shadow:2px 2px 5px lightblue;
+              text-transformation:capitalize;
+                font-family:arial; } 
+
+              
+            a{
+                color:white;
+                position:absolute;
+                right:30 px;
+                height:10 px;
+            }
+            h3{
+               color:WHITE;
+                 font-family: arial;
+
+            }
+          
+                body{
+  background-image: url('books.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+           
+    }  
+    img{
+        width:250px;
+        height:250px;
+        
+    }
+    th,td{
+        color:whitesmoke;
+        font-size:20;
+    }
+    
+    </style>
+            
+    </head>
+    <body>
+        <center> <h1> COURSE ERA  </h1> </center>
+        <a href="login.html">LOGIN</a>
+        <br>
+        <h3>  ABOUT US
+            <p>
+                Coursera courses last approximately four to twelve weeks, with one to two hours of video lectures a week.
+                These courses provide quizzes, weekly exercises, peer-graded and reviewed assignments, an optional Honors
+                and sometimes a final project or exam to complete Courses are also provided on-demand, in which case users 
+                can take their time in completing the course with all of the material available at once. As of May 2015,
+                Coursera offered 104 on-demand courses. They also provide guided projects which are short 2-3 hour projects that can be done at home.According to 'Coursera Impact Report 2020', the top five most popular courses that people learn from Coursera were contact tracing, digital marketing, project management, Python programming, and social psychology.[48] In addition to this, the DeepLearning.AI specializations by Coursera founder Andrew Ng, including AI for Good Specialization are widely reported on in media.
+            </p>
+        </h3>
+                    <center>
+
+        <table border="3">
+            <tr>
+                <th> c </th>
+                <td> HTML </td>
+                
+            </tr>
+            <tr>
+                <th>  <img src="c.png"></th>
+                <th> <img src ="html.png"></th>
+                
+                
+            </tr>
+        </table>
+                                    </center>
+
+    </body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-image: url('background.jpg');
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                
+            <center>
+                <H2> LOGIN PAGE </h2>
+            Username : <input type="text" value="enter your name">  <br>
+            <br>
+           
+            Date of birth :<input type="date" >  <br>
+            <br>
+           
+            Age : <input type="number">  <br>
+            <br>
+           
+          Phonenumber: <input type="number" >
+            <br>
+            <br>
+           
+           Address: <input type="text">
+           <br>
+        COURSES: <select size='2'>
+               <option>html</option>
+               <option>c</option>
+               <option>c++</option>
+               <option>java</option>
+               <option>css</option>
+         
+  </select>
+        <br>
+        <br>
+         <input type='submit' value='submit'>
+         
+          <input type='reset' value='cancel'>
+         
+            </center>
+            </fieldset>
+        </form>
+      
+    </body>
+</html>
