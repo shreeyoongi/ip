@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script>
+        function validateForm() {
+            // Get form inputs
+            var userId = document.getElementById('userId').value;
+            var password = document.getElementById('password').value;
+            var name = document.getElementById('name').value;
+            var address = document.getElementById('address').value;
+            var country = document.getElementById('country').value;
+            var zipcode = document.getElementById('zipcode').value;
+            var email = document.getElementById('email').value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var language = document.getElementById('language').value;
+            var about = document.getElementById('about').value;
+
+            // Regular expressions for validation
+            var userIdRegex = /^[a-zA-Z0-9]{5,7}$/;
+            var passwordRegex = /^[a-zA-Z0-9]{7,12}$/;
+            var nameRegex = /^[a-zA-Z\s]+$/;
+            var zipcodeRegex = /^[0-9]{5}$/;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Validation
+            if (!userIdRegex.test(userId)) {
+                alert('Invalid UserID. Please enter 5 to 7 alphanumeric characters.');
+                return false;
+            }
+
+            if (!passwordRegex.test(password)) {
+                alert('Invalid Password. Please enter 7 to 12 alphanumeric characters.');
+                return false;
+            }
+
+            if (!nameRegex.test(name)) {
+                alert('Invalid Name. Please enter alphabet characters only.');
+                return false;
+            }
+
+            if (!zipcodeRegex.test(zipcode)) {
+                alert('Invalid Zipcode. Please enter a valid 5-digit number.');
+                return false;
+            }
+
+            if (!emailRegex.test(email)) {
+                alert('Invalid Email. Please enter a valid email address.');
+                return false;
+            }
+
+            if (!gender) {
+                alert('Please select a gender.');
+                return false;
+            }
+
+            if (country === "") {
+                alert('Please select a country.');
+                return false;
+            }
+
+            if (language === "") {
+                alert('Please select a language.');
+                return false;
+            }
+
+            if (about.trim() === "") {
+                alert('Please provide information about yourself.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+ <center>
+    <form onsubmit="return validateForm()">
+       
+        <label for="userId">UserID:</label>
+        <input type="text" id="userId" name="userId" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            
+            <option value="">Select Country</option>
+            <option value="country1">india</option>
+             <option value="countr4">usa</option>
+            <option value="country2">south korea</option>
+            <option value="country3">autralia</option>
+            
+           
+        </select><br><br>
+
+        <label for="zipcode">Zipcode:</label>
+        <input type="text" id="zipcode" name="zipcode" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label><br><br>
+
+        <label for="language">Language:</label>
+        <select id="language" name="language" required>
+           
+            <option value="">Select Language</option>
+            <option value="language1">english</option>
+            <option value="language2">non english</option>
+            
+        </select>><br><br>
+
+        <label for="about">About:</label>
+        <textarea id="about" name="about" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</center>
+
+</body>
+</html>
+
