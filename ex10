@@ -1,0 +1,85 @@
+<?php
+function isLeapYear($year) {
+  return (($year % 4 == 0) && ($year % 100 != 0)) || ($year % 400 == 0);
+}
+echo "Enter a year: ";
+$year = intval(fgets(STDIN));
+if (isLeapYear($year)) {
+    echo "$year is a leap year.\n";
+} else {
+    echo "$year is not a leap year.\n";
+}
+?>
+2
+<?php
+
+function printFloydsTriangle($n) {
+    $num = 1;
+    for ($row = 1; $row <= $n; $row++) {
+        for ($col = 1; $col <= $row; $col++) {
+            echo $num . " ";
+            $num++;
+        }
+        echo "\n";
+    }
+}
+$n = 5;
+echo "Floyd's Triangle up to $n:\n";
+printFloydsTriangle($n);
+
+?>
+3.
+class Employee {
+    private $name;
+    private $age;
+    private $salary;
+    private $department;
+
+    public function setName($name) {
+        $this->name = $name;
+    }
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function setAge($age) {
+        if ($age >= 18 && $age <= 100) { // Assuming a reasonable age range
+            $this->age = $age;
+        } else {
+            throw new Exception("Invalid age. Age must be between 18 and 100.");
+        }
+    }
+
+    public function getAge() {
+        return $this->age;
+    }
+
+    public function setSalary($salary) {
+        $this->salary = $salary;
+    }
+
+    public function getSalary() {
+        return $this->salary;
+    }
+
+    public function setDepartment($department) {
+        $this->department = $department;
+    }
+
+    public function getDepartment() {
+        return $this->department;
+    }
+}
+
+
+$employee = new Employee();
+$employee->setName("John Doe");
+$employee->setAge(30);
+$employee->setSalary(50000);
+$employee->setDepartment("IT");
+
+echo "Employee Name: " . $employee->getName() . "\n";
+echo "Employee Age: " . $employee->getAge() . "\n";
+echo "Employee Salary: $" . $employee->getSalary() . "\n";
+echo "Employee Department: " . $employee->getDepartment() . "\n";
