@@ -1,0 +1,30 @@
+// Assuming you have jQuery for AJAX requests
+
+function getBookDetails(bookID) {
+    $.ajax({
+        url: 'path_to_xml_file.xml',
+        dataType: 'xml',
+        success: function(data) {
+            $(data).find('book').each(function() {
+                if ($(this).attr('id') == bookID) {
+                    var title = $(this).find('title').text();
+                    var author = $(this).find('author').text();
+                    var genre = $(this).find('genre').text();
+                    var price = $(this).find('price').text();
+                    var publish_date = $(this).find('publish_date').text();
+                    var description = $(this).find('description').text();
+                    
+                    // Do something with the book details
+                    console.log("Title: " + title);
+                    console.log("Author: " + author);
+                    console.log("Genre: " + genre);
+                    console.log("Price: " + price);
+                    console.log("Publish Date: " + publish_date);
+                    console.log("Description: " + description);
+                    
+                    // You can display the details in your HTML or do any other processing here
+                }
+            });
+        }
+    });
+}
